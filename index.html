@@ -25,7 +25,7 @@
 
     header {
       text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
 
     h1 {
@@ -39,6 +39,33 @@
       font-size: 1.1rem;
       max-width: 700px;
       color: #4a4a4a;
+    }
+
+    .test-instructions {
+      background: #ffffff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      margin-bottom: 2rem;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .test-instructions h2 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    .test-instructions ul {
+      list-style: none;
+      padding-left: 1rem;
+    }
+
+    .test-instructions li::before {
+      content: "✔️";
+      margin-right: 0.5rem;
+      color: #2ecc71;
     }
 
     #chatbot-container {
@@ -85,6 +112,30 @@
       Optimiza tu tiempo como anfitrión en Airbnb o Booking. Nuestro chatbot responde automáticamente a las preguntas de tus huéspedes, ayuda con el check-in y les deja una gran impresión para conseguir reseñas 5 estrellas.
     </p>
   </header>
+
+  <div class="test-instructions">
+    <h2>🔍 Prueba el chatbot con este ejemplo:</h2>
+    <ul>
+      <li><strong>Nombre propiedad:</strong> Villa Sol y Playa</li>
+      <li><strong>Dirección:</strong> Calle del Mar 12, Málaga</li>
+      <li><strong>Plataforma:</strong> Airbnb</li>
+      <li><strong>Licencia turística:</strong> Sí</li>
+      <li><strong>Check-in:</strong> 14:00</li>
+      <li><strong>Check-out:</strong> 11:00</li>
+      <li><strong>Permite late check-out:</strong> Depende</li>
+      <li><strong>WiFi:</strong> VillaSol2025</li>
+      <li><strong>Acceso:</strong> Caja fuerte junto a la puerta principal</li>
+      <li><strong>Llaves al salir:</strong> Dejar en la misma caja</li>
+      <li><strong>Normas:</strong> No fiestas, no mascotas</li>
+      <li><strong>Recomendaciones locales:</strong> Playa Malagueta, supermercado Día, parada bus 2 min</li>
+      <li><strong>Código de acceso al chatbot:</strong> SOL123</li>
+      <li><strong>Se registran huéspedes:</strong> Sí</li>
+      <li><strong>Se solicita DNI:</strong> Sí</li>
+      <li><strong>Años que se guardan los registros:</strong> 5</li>
+      <li><strong>¿Recomienda sitios turísticos?:</strong> Sí</li>
+      <li><strong>¿Activar por WhatsApp?:</strong> Sí</li>
+    </ul>
+  </div>
 
   <div id="chatbot-container">
     <flowise-fullchatbot></flowise-fullchatbot>
