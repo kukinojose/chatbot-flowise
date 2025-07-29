@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chatbot IA</title>
+</head>
+<body>
+  <div id="chatbot"></div>
+
+  <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js";
+    Chatbot.init({
+      chatflowid: "dd5189c5-5f06-49b7-98d1-2b85a1afe919",
+      apiHost: "https://flowise-hosthelper.onrender.com",
+    });
+  </script>
+</body>
+</html>
