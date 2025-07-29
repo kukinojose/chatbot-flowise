@@ -3,49 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Asistente Virtual - Solution Business AI</title>
+  <title>Asistente Virtual – Solution Business AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8f9fa;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to right, #f9f9f9, #eef2f3);
+      color: #1a1a1a;
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 2rem;
+      min-height: 100vh;
     }
-    h1 {
-      font-size: 2rem;
-      color: #222;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      max-width: 600px;
+
+    header {
       text-align: center;
-      margin-bottom: 2rem;
-      color: #444;
+      margin-bottom: 2.5rem;
     }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #2c3e50;
+      margin-bottom: 0.8rem;
+    }
+
+    p.description {
+      font-size: 1.1rem;
+      max-width: 700px;
+      color: #4a4a4a;
+    }
+
     #chatbot-container {
       width: 100%;
-      max-width: 900px;
-      min-height: 600px;
+      max-width: 960px;
+      min-height: 700px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      background: #ffffff;
     }
+
     flowise-fullchatbot {
-      display: block;
       width: 100%;
       height: 100%;
+      display: block;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.95rem;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.8rem;
+      }
+      p.description {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+      #chatbot-container {
+        min-height: 600px;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Tu Asistente Virtual 24/7</h1>
-  <p>
-    Nuestro chatbot está diseñado para responder a tus huéspedes de forma automática y profesional. Consulta horarios de check-in, normas, wifi y más. Disponible todo el día, todos los días.
-  </p>
+
+  <header>
+    <h1>Asistente Virtual para tus Propiedades</h1>
+    <p class="description">
+      Optimiza tu tiempo como anfitrión en Airbnb o Booking. Nuestro chatbot responde automáticamente a las preguntas de tus huéspedes, ayuda con el check-in y les deja una gran impresión para conseguir reseñas 5 estrellas.
+    </p>
+  </header>
 
   <div id="chatbot-container">
     <flowise-fullchatbot></flowise-fullchatbot>
   </div>
+
+  <footer>
+    © 2025 Solution Business AI – Chatbot para anfitriones
+  </footer>
 
   <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
@@ -54,5 +101,6 @@
         apiHost: "https://flowise-hosthelper.onrender.com",
     })
   </script>
+
 </body>
 </html>
